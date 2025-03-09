@@ -11,10 +11,7 @@ if (!baseUri || !dbName) {
 const uri = `${baseUri}/${dbName}`;
 
 mongoose
-  .connect(uri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(uri)
   .then(() => console.log('Successfully connected to MongoDB'))
   .catch(err => console.error('Error connecting to MongoDB:', err));
 
